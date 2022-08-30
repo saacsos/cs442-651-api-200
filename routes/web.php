@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/posts', function () {
+    return 'route/web.php posts list';
+});
+
+Route::post('/posts', function () {
+    return 'route/web.php posts store';
+});

@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/', function () {
+    return [
+        'version' => '1.0.0'
+    ];
+});
+
+Route::apiResource('/rewards', \App\Http\Controllers\Api\RewardController::class);
