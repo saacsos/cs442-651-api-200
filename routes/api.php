@@ -24,4 +24,7 @@ Route::get('/', function () {
     ];
 });
 
+Route::get('/rewards/search', [\App\Http\Controllers\Api\RewardController::class, 'search']);
+Route::get('/reward_codes/search', [\App\Http\Controllers\Api\RewardCodeController::class, 'search']);
 Route::apiResource('/rewards', \App\Http\Controllers\Api\RewardController::class);
+Route::apiResource('/reward_codes', \App\Http\Controllers\Api\RewardCodeController::class);
